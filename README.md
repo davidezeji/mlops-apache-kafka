@@ -32,7 +32,7 @@ How to describe a topic:
      --bootstrap-server localhost:9092
 ```
 ## Notes
-What is a partition in Kafka?
+**What is a partition in Kafka?**
 * In Apache Kafka, a partition is a subdivision of a topic that allows Kafka to scale horizontally and support parallel processing of data.
 * Each partition is an ordered, immutable log of records.
 * Example:
@@ -45,10 +45,10 @@ What is a partition in Kafka?
 
     * 3 consumers in a consumer group can each read from one partition, enabling high-throughput processing.
 
-What is the primary role of Apache Zookeeper in a Kafka distributed system?:
+**What is the primary role of Apache Zookeeper in a Kafka distributed system?**
 * The primary role of Apache ZooKeeper in a Kafka distributed system is to act as a centralized service for maintaining metadata, coordination, and configuration management for the Kafka brokers.
 
-Specifically, ZooKeeper handles:
+**Specifically, ZooKeeper handles:**
 1.	Leader Election:
 ZooKeeper manages which Kafka broker is the controller, responsible for administrative tasks like partition leader elections.
 
