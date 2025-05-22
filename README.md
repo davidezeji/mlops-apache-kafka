@@ -8,7 +8,7 @@ Example project of using Apache Kafka for real time streaming data.
 
 **3. Interact with Kafka using Python scripts:** *Write and run Python Producer and Consumer scripts to send and receive messages*
 
-## COMMANDS
+## Commands
 Example of how to create a topic:
 ```bash
    docker exec <container_name> kafka-topics \
@@ -26,26 +26,26 @@ How to list available topics:
 ```
 How to describe a topic:
 ```bash
-   docker exec admin-kafka-1 kafka-topics \
+   docker exec <container_name> kafka-topics \
      --describe \
      --topic sample-topic \
      --bootstrap-server localhost:9092
 ```
-## NOTES
+## Notes
 What is a partition in Kafka?
 * In Apache Kafka, a partition is a subdivision of a topic that allows Kafka to scale horizontally and support parallel processing of data.
 * Each partition is an ordered, immutable log of records.
 * Example:
     
-    If a topic has 3 partitions:
+    If a topic has 3 partitions...
 
-	    • Messages can be produced to all 3 in parallel.
+    * Messages can be produced to all 3 in parallel.
 
-        • Consumers can subscribe to any or all of the partitions.
+    * Consumers can subscribe to any or all of the partitions.
 
-	    • 3 consumers in a consumer group can each read from one partition, enabling high-throughput processing.
+    * 3 consumers in a consumer group can each read from one partition, enabling high-throughput processing.
 
-What is the primary role of Apache Zookeeper in a Kafka distributed system?
+What is the primary role of Apache Zookeeper in a Kafka distributed system?:
 * The primary role of Apache ZooKeeper in a Kafka distributed system is to act as a centralized service for maintaining metadata, coordination, and configuration management for the Kafka brokers.
 
 Specifically, ZooKeeper handles:
