@@ -49,14 +49,15 @@ How to describe a topic:
 * The primary role of Apache ZooKeeper in a Kafka distributed system is to act as a centralized service for maintaining metadata, coordination, and configuration management for the Kafka brokers.
 
 **Specifically, ZooKeeper handles:**
-1.	Leader Election:
+
+**1.**	Leader Election:
 ZooKeeper manages which Kafka broker is the controller, responsible for administrative tasks like partition leader elections.
 
-2.	Broker and Topic Metadata Management:
+**2.**	Broker and Topic Metadata Management:
 It keeps track of the list of active brokers, topic configurations, and partitions. Kafka clients can discover this metadata via ZooKeeper (prior to Kafka 2.8).
 
-3.	Cluster Membership and Health Monitoring:
+**3.**	Cluster Membership and Health Monitoring:
 ZooKeeper detects broker failures and helps Kafka reassign partition leaders in such cases.
 
-4.	Quorum Management for Consistency:
+**4.**	Quorum Management for Consistency:
 Ensures that only one broker acts as the leader for a partition at any time, helping maintain consistency.
